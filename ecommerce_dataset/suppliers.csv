@@ -1,0 +1,31 @@
+supplier_id,supplier_name,contact_name,email,phone,country,city,lead_time_days,payment_terms,created_at
+1,"Rodriguez, Figueroa and Sanchez Parts Co.",Brian Yang,garzaanthony@robinson.org,2834863794,UK,Petersonberg,9,Net 60,2020-02-25 00:00:00
+2,Bernard LLC Parts Co.,James Howard,cassandra07@martinez.com,+1-695-993-1034x1316,UK,Franciscostad,36,Net 30,2020-02-20 00:00:00
+3,Santiago Ltd Parts Co.,Maria Lynch,amandasanchez@gray-mayo.net,550.730.5641,South Korea,Lake Victor,24,Net 60,2020-02-12 00:00:00
+4,"Ellis, Baker and Wright Parts Co.",Deborah Richards,icox@snyder.com,+1-326-691-6697x8480,Japan,Danielchester,7,Prepaid,2020-03-22 00:00:00
+5,Chavez Ltd Parts Co.,Deborah Mason,williamrodriguez@evans.com,(528)280-9570x154,Germany,New Stacey,36,Prepaid,2020-01-25 00:00:00
+6,Dennis Inc Parts Co.,Kim Martinez,karroyo@rose-obrien.com,+1-534-565-7871,Taiwan,West Andrewside,25,Net 60,2020-01-31 00:00:00
+7,Chapman Inc Parts Co.,Mark Perez,heathchad@ramirez.com,+1-329-397-3763,Germany,Gomezchester,12,Net 15,2020-01-26 00:00:00
+8,Shields-Brown Parts Co.,Maria Brown,lauren13@lee.com,(424)873-1781x08013,Japan,Olsonfurt,41,Net 60,2020-03-24 00:00:00
+9,Martin Inc Parts Co.,Mrs. Rachel Gibson,uhorton@stanley.com,4982050097,Germany,Port Jacobland,14,COD,2020-02-29 00:00:00
+10,"Hensley, Powell and David Parts Co.",Lauren Williams,barnesbrandy@stewart.com,946.324.7510,Italy,New Jasonview,39,Prepaid,2020-02-11 00:00:00
+11,Mahoney Inc Parts Co.,Jaclyn Moore,cheryl80@montoya.com,911-682-4493x534,Taiwan,North Cynthiaview,12,COD,2020-01-09 00:00:00
+12,Smith and Sons Parts Co.,Deborah Figueroa,hhoffman@landry.com,+1-605-798-2620,Italy,West Jasonbury,31,Net 15,2020-02-05 00:00:00
+13,"Garcia, Deleon and Henson Parts Co.",Marc Moore,michellecherry@keith.com,001-756-634-2160x7337,USA,East Andrew,25,Prepaid,2020-01-10 00:00:00
+14,Ross LLC Parts Co.,Tracy Ramirez,ifrazier@crosby-wilson.com,(894)301-9655,South Korea,Lamborough,32,COD,2020-01-05 00:00:00
+15,Williams-Graham Parts Co.,Renee Mcdaniel,michaeljones@mccall.com,001-448-646-5648x2366,USA,Kelleytown,26,Net 15,2020-01-10 00:00:00
+16,Mitchell-Jordan Parts Co.,Mary Marshall,glowe@leon-moyer.com,+1-514-989-5134x33200,Germany,South Robertshire,42,Prepaid,2020-03-05 00:00:00
+17,Higgins Group Parts Co.,David Douglas Jr.,osbornejeffery@holmes.com,927.488.9579x868,UK,Colebury,32,Prepaid,2020-03-11 00:00:00
+18,"Ramirez, Strickland and Washington Parts Co.",Jeremiah Reeves,josephflores@miller.com,001-831-266-5876x036,USA,Woodsstad,31,Prepaid,2020-03-24 00:00:00
+19,Molina-Castaneda Parts Co.,Jennifer Adkins,tracynelson@johnson-rogers.biz,001-427-929-8069x9016,China,North Jorge,23,Prepaid,2020-03-01 00:00:00
+20,Lewis-Murphy Parts Co.,Jamie Walton,fking@smith-ryan.com,510.403.3092,Japan,Caldwellshire,6,COD,2020-01-14 00:00:00
+21,Marshall LLC Parts Co.,Carol Lawson,stricklandfrank@rodriguez-johnson.com,001-366-231-9314,Taiwan,Amandastad,8,Prepaid,2020-03-23 00:00:00
+22,Hunter LLC Parts Co.,Jason Henry,oyu@zimmerman-graham.net,+1-949-587-7694x5314,Japan,Hudsonfurt,5,Net 60,2020-03-31 00:00:00
+23,Johnson-Rosales Parts Co.,Daniel Salinas,joshua94@smith.biz,783.977.7014x3634,Italy,Ronaldside,31,Prepaid,2020-03-07 00:00:00
+24,Bell-Chavez Parts Co.,David Griffith,david82@robinson.com,001-498-694-1343x5240,Japan,North Angelaberg,26,Net 15,2020-02-06 00:00:00
+25,"Oneill, Henry and Salas Parts Co.",Julie Alexander,tammyking@wilson-jones.info,390-822-9413,UK,Port Alexandra,29,Net 15,2020-03-27 00:00:00
+26,Kerr-Evans Parts Co.,Jessica Carroll,lynchjody@garrett.com,(932)681-2067,USA,East Keithport,43,Net 15,2020-01-09 00:00:00
+27,"Heath, Jones and Hall Parts Co.",Rick Lawrence,ronaldstephens@hernandez.com,(849)694-7174,Taiwan,Kimton,9,Prepaid,2020-03-27 00:00:00
+28,Navarro-Munoz Parts Co.,Darryl Craig,keyemily@johnston-hines.com,787.342.9671x7565,UK,West Robert,21,Net 15,2020-03-25 00:00:00
+29,Roberts-Landry Parts Co.,Krista Gibson,johnny16@bryan.info,(903)985-9770x34824,Japan,North Teresabury,24,Net 30,2020-03-15 00:00:00
+30,"Moore, Pierce and Tran Parts Co.",Willie Durham,pvalentine@jimenez.com,346.677.3782x63982,Japan,Morganhaven,25,Net 15,2020-03-24 00:00:00
