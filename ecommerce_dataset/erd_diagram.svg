@@ -1,0 +1,305 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrow-end" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-many" viewBox="0 0 12 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M9 1L1 5L9 9M11 1L11 9" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-one" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M5 1L5 9M1 1L1 9" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#F8F7F4"/>
+
+  <!-- Title -->
+  <text x="600" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="#1C1C1A">Motor Parts E-Commerce — Entity Relationship Diagram</text>
+  <text x="600" y="58" text-anchor="middle" font-size="12" fill="#888780">PK = Primary Key · FK = Foreign Key · Lines show foreign-key relationships</text>
+
+  <!-- ===================== RELATIONSHIP LINES ===================== -->
+  <!-- categories → products (1:many) -->
+  <path d="M 296 196 L 396 224" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- products → order_items (1:many) -->
+  <path d="M 496 255 L 560 340" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- customers → orders (1:many) -->
+  <path d="M 810 242 L 760 340" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- orders → order_items (1:many) -->
+  <path d="M 680 388 L 680 424" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- orders → payments (1:1) -->
+  <path d="M 760 376 Q 900 376 900 424" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- orders → invoices (1:1) -->
+  <path d="M 760 390 Q 1000 390 1000 424" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- products → reviews (1:many) -->
+  <path d="M 440 302 Q 440 680 520 710" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- customers → reviews (1:many) -->
+  <path d="M 900 302 Q 900 680 760 710" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- orders → reviews (1:many) -->
+  <path d="M 700 424 Q 700 600 680 710" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+
+  <!-- ===================== CATEGORIES TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="80" width="196" height="136" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <!-- Header -->
+    <rect x="100" y="80" width="196" height="36" rx="10" fill="#085041"/>
+    <rect x="100" y="104" width="196" height="12" fill="#085041"/>
+    <text x="198" y="103" text-anchor="middle" font-size="13" font-weight="600" fill="white">categories</text>
+    <!-- PK row -->
+    <rect x="100" y="116" width="196" height="26" fill="#E1F5EE"/>
+    <text x="116" y="133" font-size="11" fill="#085041" font-weight="600">PK</text>
+    <text x="150" y="133" font-size="11" fill="#1C1C1A">category_id</text>
+    <text x="290" y="133" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <!-- Cols -->
+    <text x="116" y="156" font-size="11" fill="#5F5E5A">·</text>
+    <text x="126" y="156" font-size="11" fill="#444441">category_name</text>
+    <text x="290" y="156" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="116" y="174" font-size="10" fill="#9CA3AF" font-style="italic">10 rows</text>
+  </g>
+
+  <!-- ===================== SUPPLIERS TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="300" width="196" height="236" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="100" y="300" width="196" height="36" rx="10" fill="#0C447C"/>
+    <rect x="100" y="324" width="196" height="12" fill="#0C447C"/>
+    <text x="198" y="323" text-anchor="middle" font-size="13" font-weight="600" fill="white">suppliers</text>
+    <rect x="100" y="336" width="196" height="26" fill="#E6F1FB"/>
+    <text x="116" y="353" font-size="11" fill="#0C447C" font-weight="600">PK</text>
+    <text x="150" y="353" font-size="11" fill="#1C1C1A">supplier_id</text>
+    <text x="290" y="353" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="126" y="376" font-size="11" fill="#444441">supplier_name</text>
+    <text x="290" y="376" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="126" y="396" font-size="11" fill="#444441">contact_name</text>
+    <text x="290" y="396" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="126" y="416" font-size="11" fill="#444441">email</text>
+    <text x="290" y="416" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="126" y="436" font-size="11" fill="#444441">country / city</text>
+    <text x="290" y="436" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50/150)</text>
+    <text x="126" y="456" font-size="11" fill="#444441">lead_time_days</text>
+    <text x="290" y="456" text-anchor="end" font-size="10" fill="#888780">INT</text>
+    <text x="126" y="476" font-size="11" fill="#444441">payment_terms</text>
+    <text x="290" y="476" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="116" y="510" font-size="10" fill="#9CA3AF" font-style="italic">30 rows</text>
+  </g>
+
+  <!-- ===================== PRODUCTS TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="330" y="160" width="210" height="196" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="330" y="160" width="210" height="36" rx="10" fill="#633806"/>
+    <rect x="330" y="184" width="210" height="12" fill="#633806"/>
+    <text x="435" y="183" text-anchor="middle" font-size="13" font-weight="600" fill="white">products</text>
+    <rect x="330" y="196" width="210" height="26" fill="#FAEEDA"/>
+    <text x="346" y="213" font-size="11" fill="#633806" font-weight="600">PK</text>
+    <text x="382" y="213" font-size="11" fill="#1C1C1A">product_id</text>
+    <text x="534" y="213" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="330" y="222" width="210" height="22" fill="#FFF8EE"/>
+    <text x="346" y="237" font-size="11" fill="#BA7517" font-weight="600">FK</text>
+    <text x="382" y="237" font-size="11" fill="#1C1C1A">category_id</text>
+    <text x="534" y="237" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="346" y="258" font-size="11" fill="#444441">sku</text>
+    <text x="534" y="258" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="346" y="276" font-size="11" fill="#444441">product_name</text>
+    <text x="534" y="276" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="346" y="294" font-size="11" fill="#444441">brand</text>
+    <text x="534" y="294" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="346" y="312" font-size="11" fill="#444441">unit_price / cost_price</text>
+    <text x="534" y="312" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="346" y="330" font-size="11" fill="#444441">stock_quantity</text>
+    <text x="534" y="330" text-anchor="end" font-size="10" fill="#888780">INT</text>
+    <text x="346" y="345" font-size="10" fill="#9CA3AF" font-style="italic">200 rows</text>
+  </g>
+
+  <!-- ===================== CUSTOMERS TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="760" y="120" width="220" height="236" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="760" y="120" width="220" height="36" rx="10" fill="#711B13"/>
+    <rect x="760" y="144" width="220" height="12" fill="#711B13"/>
+    <text x="870" y="143" text-anchor="middle" font-size="13" font-weight="600" fill="white">customers</text>
+    <rect x="760" y="156" width="220" height="26" fill="#FAECE7"/>
+    <text x="776" y="173" font-size="11" fill="#711B13" font-weight="600">PK</text>
+    <text x="812" y="173" font-size="11" fill="#1C1C1A">customer_id</text>
+    <text x="974" y="173" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="776" y="196" font-size="11" fill="#444441">customer_type</text>
+    <text x="974" y="196" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="776" y="214" font-size="11" fill="#444441">first_name / last_name</text>
+    <text x="974" y="214" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="776" y="232" font-size="11" fill="#444441">email</text>
+    <text x="974" y="232" text-anchor="end" font-size="10" fill="#888780">VARCHAR(150)</text>
+    <text x="776" y="250" font-size="11" fill="#444441">date_of_birth</text>
+    <text x="974" y="250" text-anchor="end" font-size="10" fill="#888780">DATE</text>
+    <text x="776" y="268" font-size="11" fill="#444441">country / state / city</text>
+    <text x="974" y="268" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50/150)</text>
+    <text x="776" y="286" font-size="11" fill="#444441">loyalty_tier</text>
+    <text x="974" y="286" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="776" y="304" font-size="11" fill="#444441">total_lifetime_value</text>
+    <text x="974" y="304" text-anchor="end" font-size="10" fill="#888780">NUMERIC(12,2)</text>
+    <text x="776" y="343" font-size="10" fill="#9CA3AF" font-style="italic">50,000 rows</text>
+  </g>
+
+  <!-- ===================== ORDERS TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="570" y="340" width="220" height="236" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="570" y="340" width="220" height="36" rx="10" fill="#3C3489"/>
+    <rect x="570" y="364" width="220" height="12" fill="#3C3489"/>
+    <text x="680" y="363" text-anchor="middle" font-size="13" font-weight="600" fill="white">orders</text>
+    <rect x="570" y="376" width="220" height="26" fill="#EEEDFE"/>
+    <text x="586" y="393" font-size="11" fill="#3C3489" font-weight="600">PK</text>
+    <text x="622" y="393" font-size="11" fill="#1C1C1A">order_id</text>
+    <text x="784" y="393" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="570" y="402" width="220" height="22" fill="#F5F4FF"/>
+    <text x="586" y="417" font-size="11" fill="#7F77DD" font-weight="600">FK</text>
+    <text x="622" y="417" font-size="11" fill="#1C1C1A">customer_id</text>
+    <text x="784" y="417" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="586" y="440" font-size="11" fill="#444441">order_date</text>
+    <text x="784" y="440" text-anchor="end" font-size="10" fill="#888780">TIMESTAMP</text>
+    <text x="586" y="458" font-size="11" fill="#444441">status</text>
+    <text x="784" y="458" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="586" y="476" font-size="11" fill="#444441">payment_method</text>
+    <text x="784" y="476" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="586" y="494" font-size="11" fill="#444441">subtotal / tax / shipping</text>
+    <text x="784" y="494" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="586" y="512" font-size="11" fill="#444441">total_amount</text>
+    <text x="784" y="512" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="586" y="562" font-size="10" fill="#9CA3AF" font-style="italic">400,000 rows</text>
+  </g>
+
+  <!-- ===================== ORDER_ITEMS TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="430" y="580" width="220" height="176" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="430" y="580" width="220" height="36" rx="10" fill="#27500A"/>
+    <rect x="430" y="604" width="220" height="12" fill="#27500A"/>
+    <text x="540" y="603" text-anchor="middle" font-size="13" font-weight="600" fill="white">order_items</text>
+    <rect x="430" y="616" width="220" height="26" fill="#EAF3DE"/>
+    <text x="446" y="633" font-size="11" fill="#27500A" font-weight="600">PK</text>
+    <text x="482" y="633" font-size="11" fill="#1C1C1A">order_item_id</text>
+    <text x="644" y="633" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="430" y="642" width="220" height="22" fill="#F3FAE8"/>
+    <text x="446" y="657" font-size="11" fill="#639922" font-weight="600">FK</text>
+    <text x="482" y="657" font-size="11" fill="#1C1C1A">order_id</text>
+    <text x="644" y="657" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="430" y="664" width="220" height="22" fill="#F3FAE8"/>
+    <text x="446" y="679" font-size="11" fill="#639922" font-weight="600">FK</text>
+    <text x="482" y="679" font-size="11" fill="#1C1C1A">product_id</text>
+    <text x="644" y="679" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="446" y="702" font-size="11" fill="#444441">quantity</text>
+    <text x="644" y="702" text-anchor="end" font-size="10" fill="#888780">INT</text>
+    <text x="446" y="720" font-size="11" fill="#444441">unit_price / discount_pct</text>
+    <text x="644" y="720" text-anchor="end" font-size="10" fill="#888780">NUMERIC / INT</text>
+    <text x="446" y="738" font-size="11" fill="#444441">line_total</text>
+    <text x="644" y="738" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="446" y="750" font-size="10" fill="#9CA3AF" font-style="italic">~1,011,756 rows</text>
+  </g>
+
+  <!-- ===================== PAYMENTS TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="800" y="580" width="200" height="196" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="800" y="580" width="200" height="36" rx="10" fill="#085041"/>
+    <rect x="800" y="604" width="200" height="12" fill="#085041"/>
+    <text x="900" y="603" text-anchor="middle" font-size="13" font-weight="600" fill="white">payments</text>
+    <rect x="800" y="616" width="200" height="26" fill="#E1F5EE"/>
+    <text x="816" y="633" font-size="11" fill="#085041" font-weight="600">PK</text>
+    <text x="852" y="633" font-size="11" fill="#1C1C1A">payment_id</text>
+    <text x="994" y="633" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="800" y="642" width="200" height="22" fill="#EDFAF5"/>
+    <text x="816" y="657" font-size="11" fill="#1D9E75" font-weight="600">FK</text>
+    <text x="852" y="657" font-size="11" fill="#1C1C1A">order_id</text>
+    <text x="994" y="657" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="816" y="680" font-size="11" fill="#444441">payment_date</text>
+    <text x="994" y="680" text-anchor="end" font-size="10" fill="#888780">TIMESTAMP</text>
+    <text x="816" y="698" font-size="11" fill="#444441">amount</text>
+    <text x="994" y="698" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="816" y="716" font-size="11" fill="#444441">payment_method</text>
+    <text x="994" y="716" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="816" y="734" font-size="11" fill="#444441">payment_status</text>
+    <text x="994" y="734" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="816" y="752" font-size="11" fill="#444441">gateway / currency</text>
+    <text x="994" y="752" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50) / CHAR(3)</text>
+    <text x="816" y="768" font-size="10" fill="#9CA3AF" font-style="italic">400,000 rows</text>
+  </g>
+
+  <!-- ===================== INVOICES TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="980" y="340" width="200" height="196" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="980" y="340" width="200" height="36" rx="10" fill="#533A1C"/>
+    <rect x="980" y="364" width="200" height="12" fill="#533A1C"/>
+    <text x="1080" y="363" text-anchor="middle" font-size="13" font-weight="600" fill="white">invoices</text>
+    <rect x="980" y="376" width="200" height="26" fill="#FDF4E7"/>
+    <text x="996" y="393" font-size="11" fill="#533A1C" font-weight="600">PK</text>
+    <text x="1032" y="393" font-size="11" fill="#1C1C1A">invoice_id</text>
+    <text x="1174" y="393" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="980" y="402" width="200" height="22" fill="#FFF9F0"/>
+    <text x="996" y="417" font-size="11" fill="#C08030" font-weight="600">FK</text>
+    <text x="1032" y="417" font-size="11" fill="#1C1C1A">order_id</text>
+    <text x="1174" y="417" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="996" y="440" font-size="11" fill="#444441">invoice_date</text>
+    <text x="1174" y="440" text-anchor="end" font-size="10" fill="#888780">DATE</text>
+    <text x="996" y="458" font-size="11" fill="#444441">due_date</text>
+    <text x="1174" y="458" text-anchor="end" font-size="10" fill="#888780">DATE</text>
+    <text x="996" y="476" font-size="11" fill="#444441">total_amount</text>
+    <text x="1174" y="476" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="996" y="494" font-size="11" fill="#444441">paid_amount</text>
+    <text x="1174" y="494" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="996" y="512" font-size="11" fill="#444441">balance_due</text>
+    <text x="1174" y="512" text-anchor="end" font-size="10" fill="#888780">NUMERIC(10,2)</text>
+    <text x="996" y="530" font-size="11" fill="#444441">invoice_status</text>
+    <text x="1174" y="530" text-anchor="end" font-size="10" fill="#888780">VARCHAR(50)</text>
+    <text x="996" y="527" font-size="10" fill="#9CA3AF" font-style="italic"></text>
+    <text x="996" y="528" font-size="10" fill="#9CA3AF" font-style="italic">400,000 rows</text>
+  </g>
+
+  <!-- ===================== REVIEWS TABLE ===================== -->
+  <g filter="url(#shadow)">
+    <rect x="560" y="700" width="220" height="176" rx="10" fill="white" stroke="#D3D1C7" stroke-width="1"/>
+    <rect x="560" y="700" width="220" height="36" rx="10" fill="#993C1D"/>
+    <rect x="560" y="724" width="220" height="12" fill="#993C1D"/>
+    <text x="670" y="723" text-anchor="middle" font-size="13" font-weight="600" fill="white">reviews</text>
+    <rect x="560" y="736" width="220" height="26" fill="#FAECE7"/>
+    <text x="576" y="753" font-size="11" fill="#993C1D" font-weight="600">PK</text>
+    <text x="612" y="753" font-size="11" fill="#1C1C1A">review_id</text>
+    <text x="774" y="753" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="560" y="762" width="220" height="22" fill="#FFF4F1"/>
+    <text x="576" y="777" font-size="11" fill="#D85A30" font-weight="600">FK</text>
+    <text x="612" y="777" font-size="11" fill="#1C1C1A">product_id</text>
+    <text x="774" y="777" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="560" y="784" width="220" height="22" fill="#FFF4F1"/>
+    <text x="576" y="799" font-size="11" fill="#D85A30" font-weight="600">FK</text>
+    <text x="612" y="799" font-size="11" fill="#1C1C1A">customer_id</text>
+    <text x="774" y="799" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <rect x="560" y="806" width="220" height="22" fill="#FFF4F1"/>
+    <text x="576" y="821" font-size="11" fill="#D85A30" font-weight="600">FK</text>
+    <text x="612" y="821" font-size="11" fill="#1C1C1A">order_id</text>
+    <text x="774" y="821" text-anchor="end" font-size="10" fill="#5F5E5A">INT</text>
+    <text x="576" y="844" font-size="11" fill="#444441">rating (1–5) / review_date</text>
+    <text x="774" y="844" text-anchor="end" font-size="10" fill="#888780">INT / TIMESTAMP</text>
+    <text x="576" y="862" font-size="10" fill="#9CA3AF" font-style="italic">280,000 rows</text>
+  </g>
+
+  <!-- ===================== LEGEND ===================== -->
+  <rect x="100" y="820" width="310" height="60" rx="8" fill="white" stroke="#D3D1C7" stroke-width="1" filter="url(#shadow)"/>
+  <text x="116" y="840" font-size="11" font-weight="600" fill="#1C1C1A">Legend</text>
+  <!-- PK swatch -->
+  <rect x="116" y="848" width="28" height="14" rx="3" fill="#EEEDFE" stroke="#AFA9EC" stroke-width="0.5"/>
+  <text x="152" y="860" font-size="10" fill="#444441">Primary Key (PK)</text>
+  <!-- FK swatch -->
+  <rect x="220" y="848" width="28" height="14" rx="3" fill="#F5F4FF" stroke="#AFA9EC" stroke-width="0.5"/>
+  <text x="256" y="860" font-size="10" fill="#444441">Foreign Key (FK)</text>
+  <!-- Line style -->
+  <line x1="116" y1="876" x2="160" y2="876" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-end)"/>
+  <text x="170" y="880" font-size="10" fill="#444441">FK relationship (1 → many)</text>
+
+</svg>

@@ -16,7 +16,7 @@ suppliers  (reference)      customers ──────────────
 ```
 
 ---
-[text](../../../../Downloads/ecommerce_erd.html)
+![alt text](erd_diagram.svg)
 ---
 
 ## Tables
