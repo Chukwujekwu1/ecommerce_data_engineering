@@ -16,7 +16,7 @@ suppliers  (reference)      customers ──────────────
 ```
 
 ---
-![alt text](erd_diagram.svg)
+![alt text](postgres_load_order.svg)
 ---
 
 ## Tables
