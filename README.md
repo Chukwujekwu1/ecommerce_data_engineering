@@ -1,2 +1,2 @@
 # ecommerce_data_engineering
-![alt text](postgres_load_order.svg)
+![alt text](two_layer_data_architecture.svg)
